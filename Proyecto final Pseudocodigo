@@ -1,12 +1,16 @@
 INICIO{
 LEER 'Las calificaciones son las siguientes', A=19,20, B =16, 17 y 18, C = 13, 14 y 15, D = 10, 11 y 12, E = 1 hasta el 9;
 MOSTRAR "Escriba la calificacion Z";
-LEER 'Z = 19 OR Z = 20'
-    CONDICION1 { SI ES "SI"
+    CONDICION1: LEER 'Z = 19 OR Z = 20';
+               { Si es "SI":
        MOSTRAR "Su calificacion es A"} FIN;
-    { SI ES "NO"
-       LEER 'Z = 16 OR Z = 17 OR Z = 18'
-       }  
-
+               { Si es "NO":
+                CONDICION2: LEER 'Z = 16 OR Z = 17 OR Z = 18';
+                 { Si es "SI":
+            MOSTRAR "Su calificacion es B"} FIN;
+                   {Si es "NO":
+                    CONDICION3: LEER 'Z = 13 OR Z = 14 OR Z = 15';
+                     { Si es "SI":
+                MOSTRAR "Su calificacion es C"} FIN;
 
 }
