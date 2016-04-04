@@ -1,32 +1,36 @@
 INICIO{
 LEER 'Las calificaciones son las siguientes', A=19,20, B =16, 17 y 18, C = 13, 14 y 15, D = 10, 11 y 12, E = 1 hasta el 9;
 MOSTRAR "Escriba la calificacion Z";
-    CONDICION1: LEER 'Z = 19 OR Z = 20';
+    CONDICION1: LEER 'Z = 19 OR Z = 20'
                { Si es "SI":
-       MOSTRAR "Su calificacion es A"} FIN;
-               { Si es "NO":
-                CONDICION2: LEER 'Z = 16 OR Z = 17 OR Z = 18';
+       MOSTRAR "Su calificacion es A"};
+    MIENTRAS 'Z<20 OR Z=20' FIN;
+                { Si es "NO":
+                CONDICION2: LEER 'Z = 16 OR Z = 17 OR Z = 18'
                  { Si es "SI":
-            MOSTRAR "Su calificacion es B"} FIN;
-                   {Si es "NO":
-                    CONDICION3: LEER 'Z = 13 OR Z = 14 OR Z = 15';
-                     { Si es "SI":
+            MOSTRAR "Su calificacion es B"};
+    MIENTRAS 'Z<20 OR Z=20' FIN;
+                  {Si es "NO":
+                    CONDICION3: LEER 'Z = 13 OR Z = 14 OR Z = 15'
+                    { Si es "SI":
                 MOSTRAR "Su calificacion es C"} FIN;
-                       {Si es "NO":
+    MIENTRAS 'Z<20 OR Z=20' FIN; 
+                      {Si es "NO":
                         CONDICION4: LEER 'Z = 10 OR Z = 11 OR Z = 12'
                         {Si es "SI":
                     MOSTRAR "Su calificacion es D"} FIN;
+    MIENTRAS 'Z<20 OR Z=20' FIN;
                          { Si es "NO":
                           CONDICION5: LEER 'Z = 1 OR Z = 2 OR Z = 3 OR Z = 4 OR Z = 5 OR Z = 6 OR Z = 7 OR Z = 8 OR Z = 9'
                            { Si es "SI":
                         MOSTRAR: "Su calificacion es E"} FIN;
+    MIENTRAS 'Z<20 OR Z=20' FIN;
                             { Si es "NO":
-                           LEER 'Esta calificacion no se encuentra entre las establesidas entre 1 - 20, vuelva a ingresar una calificacion que este entre las establesidas';
                             }SALIDA CONDICION5;
                         }SALIDA CONDICION4;
                 }SALIDA CONDICION3;
             }SALIDA CONDICION2;
     }SALIDA CONDICION1;  
+LEER 'Esta calificacion no se encuentra entre las establesidas entre 1 - 20, vuelva a ingresar una calificacion que este entre las establesidas';
+MOSTRAR "Escriba la calificacion Z";
 FIN;}
-
-}
